@@ -14,7 +14,7 @@ app.use(cors({
 }));
 
 const PORT = process.env.PORT || 10000;
-const ADDI_TOKEN_URL = process.env.ADDI_TOKEN_URL || 'https://api.addi.com/auth/oauth/token';
+const ADDI_TOKEN_URL = process.env.ADDI_TOKEN_URL || 'https://api.addi.com/auth/v1/oauth/token';
 const ADDI_ORDER_URL = process.env.ADDI_ORDER_URL || 'https://api.addi.com/payments/v1/orders';
 const CLIENT_ID = process.env.ADDI_CLIENT_ID;
 const CLIENT_SECRET = process.env.ADDI_CLIENT_SECRET;
@@ -88,4 +88,5 @@ app.post('/create-order', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Addi backend running on port ${PORT}`);
 });
+
 
